@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Welcome to Main Screen! :D",
+    "name": "principalScreen",
+    "button": "principal",
+    "content": {
+      "questions": [
+        {
+          "description": "Type the name of the button of the function you want to access",
+          "message": "Select something valid",
+          "name": "answer",
+          "required": true
+        }
+      ],
+      "OtherScreens": [
+        {
+          "title": "Create a person",
+          "button": "create"
+        },
+        {
+          "title": "See all the persons",
+          "button": "read"
+        },
+        {
+          "title": "Update a person",
+          "button": "update"
+        },
+        {
+          "title": "delete a person",
+          "button": "delete"
+        },
+        {
+          "title": "Exit",
+          "button": "ex"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Add a new person",
+    "name": "createScreen",
+    "button": "create",
+    "content": {
+      "questions": [
+        {
+          "description": "Introduce the name",
+          "message": "Cannot be empty",
+          "name": "username",
+          "required": true
+        },
+        {
+          "description": "Introduce the lastname",
+          "message": "Cannot be empty",
+          "name": "lastname",
+          "required": true
+        },
+        {
+          "description": "Introduce your age",
+          "message": "Cannot be empty",
+          "name": "age",
+          "required": true
+        },
+        {
+          "description": "Introduce your email",
+          "message": "Cannot be empty",
+          "name": "email",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "title": "List of persons",
+    "name": "readScreen",
+    "button": "read",
+    "content": {
+      "questions": [
+        {
+          "description": "\n\n1) See All Clients\n\n2) Search By ID",
+          "message": "Cannot be empty",
+          "name": "answerRead",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "title": "Update a person",
+    "name": "updateScreen",
+    "button": "update",
+    "content": {
+      "questions": [
+        {
+          "description": "Enter the ID of the person you want to update",
+          "message": "Cannot be empty",
+          "name": "personId",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "title": "Delete a person",
+    "name": "deleteScreen",
+    "button": "delete",
+    "content": {
+      "questions": [
+        {
+          "description": "Enter the ID of the person you want to delete",
+          "message": "Cannot be empty",
+          "name": "personId",
+          "required": true
+        }
+      ]
+    }
+  }
+]
