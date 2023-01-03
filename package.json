@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "console-handler-arquitectura": "^1.0.6",
+    "console-handler-arquitectura": "^1.1.1",
     "mongoose": "^6.8.1",
     "prompt": "^1.3.0"
   }
