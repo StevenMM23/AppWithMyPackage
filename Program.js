@@ -3,7 +3,8 @@ const connection = require("./Database");
 const prompt = require("prompt");
 const configJson = require("console-handler-arquitectura");
 const { personModel } = require("./Models/Persona");
-const path = require("path")
+const path = require("path");
+const { config } = require("process");
 connection();
 
 prompt.start();
@@ -131,7 +132,7 @@ async function searchByID() {
   }
 }
 
-async function exportQuestions(name, data){ 
+async function exportQuestions(name, data) {
   await configJson.exportToJSON(name, data);
 }
 
@@ -164,12 +165,34 @@ async function FunctionHandler(button) {
     }
   }
 }
+
+const lowers = (text) => text.toString().toLowerCase();
+
+const upper = (text) => text.toString().toUpperCase();
+
+const buttonDecorator = (button) => {
+  return ` { ${button} }`;
+};
+let spaceBetweenTitleAndButton = (label) => {
+  let space = "";
+  for (let i = 0; i < label.length / 7; i++) {
+    space += " ";
+  }
+  return "------->";
+};
+
 //Renderiza el menu principal del JSON (Button: "Principal'")
 async function Menu() {
   do {
     console.clear();
     const [principalScreen] = configJson.getScreenByButton("principal");
-    configJson.getOptionsColor("magenta", "principal");
+    configJson.getOptionsColor(
+      "",
+      "principal",
+      spaceBetweenTitleAndButton,
+      upper,
+      buttonDecorator
+    );
 
     configJson.consoleLogColor("blue", principalScreen.title);
     const { answer } = await menuPrincipal();
